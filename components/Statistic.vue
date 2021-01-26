@@ -1,22 +1,29 @@
 <template>
-  <div class="bg-bg-light pb-32">
-    <div class="text-center pt-56 pb-20">
+  <div class="bg-bg-light pb-24 md:pb-32">
+    <div class="text-center pt-56 pb-10 md:pb-20">
       <h2 class="font-bold text-4xl mb-4">Advanced Statistic</h2>
       <p class="text-gray-500 max-w-md mx-auto">
         Track how your links are performing across the web with our advanced
         statistics dashboard
       </p>
     </div>
-    <div class="flex max-w-6xl mx-auto relative">
+    <div
+      class="flex max-w-6xl mx-auto relative md:flex-row flex-col px-6 xl:px-4"
+    >
       <Card
         v-for="(card, index) in cards"
         :key="card.id"
         :card="card"
         :index="index"
-        class="z-10"
-        :class="'mt-' + index * 12"
+        class="z-10 mt-16"
+        :class="'md:mt-' + index * 12"
       />
-      <div class="h-2 absolute top-1/2 px-5 w-full bg-theme z-0"></div>
+      <div
+        class="h-2 absolute hidden md:block top-1/2 pr-8 overflow-hidden w-10/12 bg-theme z-0"
+      ></div>
+      <div
+        class="w-1 absolute left-1/2 h-10/12 top-40 bg-theme z-0 md:hidden"
+      ></div>
     </div>
   </div>
 </template>

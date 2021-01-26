@@ -11,17 +11,23 @@ module.exports = {
       },
       spacing: {
         "70": "70px",
-        "100": "100px"
+        "100": "100px",
+        "120": "120px"
+      },
+      minHeight: {
+        '42': '42px',
       },
       height: {
         '25': '25px',
         '35': '35px',
+        '42': '42px',
         "70": "70px",
         "80": "80px",
         '170': "170px",
         '250': "250px",
         '310': "310px",
-        "650": "650px"
+        "650": "650px",
+        "10/12": "83.333333%"
       },
       textColor: {
         "theme": "#2FCFD2",
@@ -32,6 +38,10 @@ module.exports = {
         'bg-light': '#F0F1F6',
         'dark': '#232027'
       },
+      borderColor: theme => ({
+        ...theme('colors'),
+        'theme': '#2FCFD2',
+      }),
       backgroundImage: theme => ({
         'url': "url('/images/bg-shorten-desktop.svg')",
         'url-m': "url('/images/bg-shorten-mobile.svg')",
@@ -47,9 +57,12 @@ module.exports = {
         'instagram-hover': "url('/images/icon-instagram-hover.svg')",
       }),
       inset: {
+        '40': '40px',
         '-2': '-2rem',
         '-3': '-3rem',
-        '1/2': '50%'
+        '-10': '-10rem',
+        '1/2': '50%',
+        'circle': "calc(50% - 36px)"
       }
     },
   },
