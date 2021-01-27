@@ -1,5 +1,6 @@
 <template>
   <div class="bg-bg-light pb-24 md:pb-32">
+    <Shorten />
     <div class="text-center pt-56 pb-10 md:pb-20">
       <h2 class="font-bold text-4xl mb-4">Advanced Statistic</h2>
       <p class="text-gray-500 max-w-md mx-auto">

@@ -2,7 +2,6 @@
   <div>
     <Header />
     <Kv />
-    <Shorten />
     <Statistic />
     <CallToAction />
     <Footer />

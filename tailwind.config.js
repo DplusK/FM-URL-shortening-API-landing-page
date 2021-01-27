@@ -32,6 +32,9 @@ module.exports = {
       textColor: {
         "theme": "#2FCFD2",
       },
+      outline: {
+        red: ['2px solid #DC2626', '2px'],
+      },
       backgroundColor: {
         "theme": "#2FCFD2",
         'bg': '#3A3053',
