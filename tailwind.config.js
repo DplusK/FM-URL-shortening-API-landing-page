@@ -4,19 +4,13 @@ module.exports = {
     // purgeLayersByDefault: true,
   },
   purge: {
-    options: {
-      whitelist: ['margin-top'],
-    },
+    preserveHtmlElements: false,
+    content: ['./components/Statistic.vue'],
   },
   theme: {
     extend: {
       width: {
         '25': '25px'
-      },
-      margin: {
-        "12": "12rem",
-        "24": "24rem",
-        "36": "36rem",
       },
       spacing: {
         "70": "70px",
