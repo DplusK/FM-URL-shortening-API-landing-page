@@ -17,7 +17,7 @@
         :card="card"
         :index="index"
         class="z-10 mt-16"
-        :class="'md:mt-' + index * 12"
+        :class="'md:mt-' + index * 8"
       />
       <div
         class="h-2 absolute hidden md:block top-1/2 pr-8 overflow-hidden w-10/12 bg-theme z-0"
