@@ -23,8 +23,8 @@
           @click="fetchSomething"
           class="bg-theme cursor-pointer rounded-md text-white h-42 min-h-42 md:h-70 px-5 md:ml-8 w-full md:w-auto hover:text-theme hover:bg-white border-theme border transistion-color duration-200"
         >
-          <p v-if="!loading">Shorten it!</p>
-          <p v-else class="animate-pulse">Processing</p>
+          <span v-if="!loading">Shorten it!</span>
+          <span v-else class="animate-pulse">Processing</span>
         </button>
       </div>
       <div class="px-8 md:px-20 text-red-600 mt-5" v-show="error">

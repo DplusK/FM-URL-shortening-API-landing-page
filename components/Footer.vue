@@ -46,19 +46,15 @@
       <div class="flex lg:ml-20">
         <div
           class="w-25 h-25 cursor-pointer bg-no-repeat bg-cotain bg-center bg-facebook hover:bg-facebook-hover"
-          alt="facebook"
         ></div>
         <div
           class="w-25 h-25 cursor-pointer bg-no-repeat bg-cotain bg-center ml-4 bg-twitter hover:bg-twitter-hover"
-          alt="twitter"
         ></div>
         <div
           class="w-25 h-25 cursor-pointer bg-no-repeat bg-cotain bg-center ml-4 bg-pinterest hover:bg-pinterest-hover"
-          alt="pinterest"
         ></div>
         <div
           class="w-25 h-25 cursor-pointer bg-no-repeat bg-cotain bg-center ml-4 bg-instagram hover:bg-instagram-hover"
-          alt="instagram"
         ></div>
       </div>
     </div>

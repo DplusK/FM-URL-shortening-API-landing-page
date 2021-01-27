@@ -22,8 +22,8 @@
           class="bg-theme text-white px-4 py-2 rounded-md hover:bg-opacity-50"
           :class="!copied ? '' : 'bg-bg  hover:bg-opacity-100'"
         >
-          <p v-if="!copied">Copy</p>
-          <p v-else>Copied!</p>
+          <span v-if="!copied">Copy</span>
+          <span v-else>Copied!</span>
         </button>
       </div>
     </div>
