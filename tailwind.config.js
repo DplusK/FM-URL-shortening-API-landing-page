@@ -4,8 +4,6 @@ module.exports = {
     // purgeLayersByDefault: true,
   },
   purge: {
-    preserveHtmlElements: false,
-    content: ['./components/Statistic.vue'],
   },
   theme: {
     extend: {
