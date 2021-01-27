@@ -1,10 +1,10 @@
 <template>
   <div class="w-full transform -translate-y-16 -mb-40 px-6 xl:px-4">
     <div
-      class="max-w-6xl mx-auto bg-bg w-full rounded-md flex overflow-hidden py-12 flex-col"
+      class="max-w-6xl mx-auto bg-bg w-full rounded-md flex overflow-hidden py-6 md:py-12 flex-col"
     >
       <div
-        class="bg-url w-full px-8 lg:px-20 flex items-center bg-no-repeat bg-cover lg:flex-row flex-col"
+        class="bg-url w-full px-6 md:px-20 flex items-center bg-no-repeat bg-cover md:flex-row flex-col"
       >
         <input
           name="Shorten URL"
@@ -12,7 +12,7 @@
           v-model="inputUrl"
           v-on:keyup.enter="fetchSomething"
           placeholder="Shoten a link here..."
-          class="bg-white rounded-md placeholder-gray-500 pl-4 text-lg h-42 min-h-42 lg:h-70 flex-1 w-full mb-5 lg:mb-0"
+          class="bg-white rounded-md placeholder-gray-500 pl-4 text-lg h-42 min-h-42 md:h-70 flex-1 w-full mb-5 md:mb-0"
           :class="[
             error ? 'border-4 border-red-600 ' : '',
             loading ? 'bg-gray-200' : '',
@@ -21,22 +21,17 @@
         />
         <button
           @click="fetchSomething"
-          class="bg-theme cursor-pointer rounded-md text-white h-42 min-h-42 lg:h-70 px-5 lg:ml-8 w-full lg:w-auto hover:text-theme hover:bg-white border-theme border transistion-color duration-200"
+          class="bg-theme cursor-pointer rounded-md text-white h-42 min-h-42 md:h-70 px-5 md:ml-8 w-full md:w-auto hover:text-theme hover:bg-white border-theme border transistion-color duration-200"
         >
           <p v-if="!loading">Shorten it!</p>
           <p v-else class="animate-pulse">Processing</p>
         </button>
       </div>
-      <div class="px-8 lg:px-20 text-red-600 mt-5" v-show="error">
+      <div class="px-8 md:px-20 text-red-600 mt-5" v-show="error">
         Please add a link
       </div>
     </div>
-    <Individual
-      :url="url"
-      v-for="url in urlList"
-      :key="url.code"
-      class="max-w-6xl mx-auto bg-white w-full rounded-md py-6 px-4 mt-4"
-    />
+    <Individual :url="url" v-for="url in urlList" :key="url.code" />
   </div>
 </template>
 

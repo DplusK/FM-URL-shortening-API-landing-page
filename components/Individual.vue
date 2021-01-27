@@ -1,24 +1,31 @@
 <template>
-  <div class="flex items-center">
-    <a :href="url.original_link" class="py-2">
-      {{ url.original_link }}
-    </a>
-    <div class="ml-auto flex">
+  <div
+    class="max-w-6xl mx-auto bg-white w-full rounded-md py-3 px-6 md:py-6 md:px-4 mt-4"
+  >
+    <div class="flex items-center md:flex-no-wrap flex-wrap justify-start">
       <a
-        class="mr-5 text-theme py-2"
-        target="_blank"
-        :href="url.full_short_link"
-        >{{ url.short_link }}</a
+        :href="url.original_link"
+        class="py-2 w-full text-left md:w-auto border-b border-gray-400 mb-2 md:mb-0 md:border-b-0"
       >
-      <button
-        v-clipboard:copy="url.short_link"
-        v-clipboard:success="onCopy"
-        class="bg-theme text-white px-4 py-2 rounded-md hover:bg-opacity-50"
-        :class="!copied ? '' : 'bg-bg  hover:bg-opacity-100'"
-      >
-        <p v-if="!copied">Copy</p>
-        <p v-else>Copied!</p>
-      </button>
+        {{ url.original_link }}
+      </a>
+      <div class="ml-0 flex md:ml-auto">
+        <a
+          class="mr-5 text-theme py-2"
+          target="_blank"
+          :href="url.full_short_link"
+          >{{ url.short_link }}</a
+        >
+        <button
+          v-clipboard:copy="url.short_link"
+          v-clipboard:success="onCopy"
+          class="bg-theme text-white px-4 py-2 rounded-md hover:bg-opacity-50"
+          :class="!copied ? '' : 'bg-bg  hover:bg-opacity-100'"
+        >
+          <p v-if="!copied">Copy</p>
+          <p v-else>Copied!</p>
+        </button>
+      </div>
     </div>
   </div>
 </template>
