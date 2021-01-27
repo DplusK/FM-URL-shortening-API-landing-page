@@ -3,7 +3,11 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: {
+    options: {
+      whitelist: ['margin-top'],
+    },
+  },
   theme: {
     extend: {
       width: {
